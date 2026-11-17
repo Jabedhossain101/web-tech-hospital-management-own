@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="patient.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Patient Registration</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Registration</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <form id="patientRegForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Patient Information</div>
+        <div class="form-row">
+          <label for="patName">Full Name:</label>
+          <div>
+            <input type="text" id="patName" placeholder="e.g. Tanvir Hasan" />
+            <div class="error-msg" id="errPatName"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="patId">Patient ID:</label>
+          <div><input type="text" id="patId" placeholder="e.g. PAT-3001" /></div>
+        </div>
+        <div class="form-row">
+          <label for="patAge">Age:</label>
+          <div><input type="number" id="patAge" placeholder="e.g. 28" /></div>
+        </div>
+        <div class="form-row">
+          <label for="patUser">Username:</label>
+          <div><input type="text" id="patUser" placeholder="Enter username" /></div>
+        </div>
+        <div class="form-row">
+          <label for="patPass">Password:</label>
+          <div><input type="password" id="patPass" placeholder="Enter password" /></div>
+        </div>
+        <div class="form-row">
+          <label></label>
+          <div>
+            <button type="submit" class="btn-primary">Register</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div style="margin-top: 10px; font-size: 13px;">Already registered? <a href="login.html">Login here</a></div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="patient.js"></script>
+</body>
+</html>

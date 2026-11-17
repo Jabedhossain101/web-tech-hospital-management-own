@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurse Dashboard</title>
+  <link rel="stylesheet" href="nurse.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Nurse Dashboard</h1>
+
+    <nav class="nav-bar" id="nurseDashNav">
+      <a href="../index.html">Home</a>
+      <button type="button" class="active" data-tab="vitalsTab">Patient Vitals</button>
+      <button type="button" data-tab="medTab">Medication Log</button>
+      <button type="button" data-tab="shiftTab">Shift Swap</button>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <div id="vitalsTab" class="tab-section active">
+      <div class="form-box">
+        <div class="form-box-title">Record Patient Vitals</div>
+        <div class="form-row">
+          <label for="vitPatient">Patient:</label>
+          <div><input type="text" id="vitPatient" placeholder="Patient name" /></div>
+        </div>
+        <div class="form-row">
+          <label for="vitBp">Blood Pressure:</label>
+          <div><input type="text" id="vitBp" placeholder="e.g. 120/80 mmHg" /></div>
+        </div>
+        <div class="form-row">
+          <label for="vitTemp">Temperature:</label>
+          <div><input type="text" id="vitTemp" placeholder="e.g. 98.6 F" /></div>
+        </div>
+        <div class="form-row">
+          <label for="vitPulse">Pulse:</label>
+          <div><input type="text" id="vitPulse" placeholder="e.g. 76 bpm" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addVitBtn">Save Vitals</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Patient</th><th>BP</th><th>Temp</th><th>Pulse</th><th>Action</th></tr></thead>
+          <tbody id="vitBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="medTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Medication Log</div>
+        <div class="form-row">
+          <label for="medPatient">Patient:</label>
+          <div><input type="text" id="medPatient" placeholder="Patient name" /></div>
+        </div>
+        <div class="form-row">
+          <label for="medName">Medicine:</label>
+          <div><input type="text" id="medName" placeholder="Medicine name" /></div>
+        </div>
+        <div class="form-row">
+          <label for="medTime">Time:</label>
+          <div><input type="text" id="medTime" placeholder="e.g. 02:00 PM" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addMedBtn">Log Medication</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Patient</th><th>Medicine</th><th>Time</th><th>Status</th></tr></thead>
+          <tbody id="medBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="shiftTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Request Shift Swap</div>
+        <div class="form-row">
+          <label for="shfCurrent">Current Shift:</label>
+          <div><input type="text" id="shfCurrent" placeholder="Morning" /></div>
+        </div>
+        <div class="form-row">
+          <label for="shfReq">Requested Shift:</label>
+          <div><input type="text" id="shfReq" placeholder="Evening" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addShfBtn">Submit Request</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Current</th><th>Requested</th><th>Status</th></tr></thead>
+          <tbody id="shfBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="nurse.js"></script>
+</body>
+</html>

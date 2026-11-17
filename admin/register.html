@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Registration</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand">
+      <div class="logo-badge">AIUB Logo</div>
+    </div>
+    <h1 class="page-heading">Admin Registration</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Registration</a>
+      <a href="dashboard.html">Add Staff</a>
+      <a href="dashboard.html">Departments</a>
+      <a href="dashboard.html">Reports</a>
+    </nav>
+
+    <form id="adminRegisterForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Admin Information</div>
+
+        <div class="form-row">
+          <label for="fullName">Full Name:</label>
+          <div class="input-group">
+            <input type="text" id="fullName" placeholder="Enter full name" />
+            <div class="error-msg" id="errFullName"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="adminId">Admin ID:</label>
+          <div class="input-group">
+            <input type="text" id="adminId" placeholder="e.g. ADM-1234" />
+            <div class="error-msg" id="errAdminId"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <div class="input-group">
+            <input type="email" id="email" placeholder="Enter email" />
+            <div class="error-msg" id="errEmail"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone:</label>
+          <div class="input-group">
+            <input type="text" id="phone" placeholder="e.g. 01712345678" />
+            <div class="error-msg" id="errPhone"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Gender:</label>
+          <div class="input-group">
+            <div class="inline-options">
+              <label><input type="radio" name="gender" value="Male" /> Male</label>
+              <label><input type="radio" name="gender" value="Female" /> Female</label>
+              <label><input type="radio" name="gender" value="Other" /> Other</label>
+            </div>
+            <div class="error-msg" id="errGender"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="adminRole">Admin Role:</label>
+          <div class="input-group">
+            <select id="adminRole">
+              <option value="">-- Select Role --</option>
+              <option value="Super Admin">Super Admin</option>
+              <option value="System Admin">System Admin</option>
+              <option value="HR Admin">HR Admin</option>
+            </select>
+            <div class="error-msg" id="errRole"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">Permissions</div>
+        <div class="form-row">
+          <label>Can Manage:</label>
+          <div class="input-group">
+            <div class="inline-options">
+              <label><input type="checkbox" name="perm" value="Doctors" /> Doctors</label>
+              <label><input type="checkbox" name="perm" value="Nurses" /> Nurses</label>
+              <label><input type="checkbox" name="perm" value="Patients" /> Patients</label>
+              <label><input type="checkbox" name="perm" value="Reports" /> Reports</label>
+            </div>
+            <div class="error-msg" id="errPerm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">Account</div>
+
+        <div class="form-row">
+          <label for="username">Username:</label>
+          <div class="input-group">
+            <input type="text" id="username" placeholder="4 - 15 characters" />
+            <div class="error-msg" id="errUsername"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Enter password" />
+            <div class="hint-text">At least 8 characters with an uppercase letter, a lowercase letter and a number</div>
+            <div class="error-msg" id="errPassword"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="confirmPassword">Confirm Password:</label>
+          <div class="input-group">
+            <input type="password" id="confirmPassword" placeholder="Re-enter password" />
+            <div class="error-msg" id="errConfirmPassword"></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary">Register</button>
+      <button type="reset" class="btn-secondary" id="resetRegBtn">Reset</button>
+
+      <div id="regBanner" class="status-banner">Please fix the errors marked in red.</div>
+      <div class="helper-link">Already registered? <a href="login.html">Login here</a></div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+
+  <script src="../storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

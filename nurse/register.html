@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurse Registration</title>
+  <link rel="stylesheet" href="nurse.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Nurse Registration</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Registration</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <form id="nurseRegForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Nurse Information</div>
+        <div class="form-row">
+          <label for="nurseName">Full Name:</label>
+          <div>
+            <input type="text" id="nurseName" placeholder="e.g. Nurse Salma Akter" />
+            <div class="error-msg" id="errNurseName"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="nurseId">Nurse ID:</label>
+          <div><input type="text" id="nurseId" placeholder="e.g. NRS-2001" /></div>
+        </div>
+        <div class="form-row">
+          <label for="nurseDept">Ward / Dept:</label>
+          <div><input type="text" id="nurseDept" placeholder="e.g. General Ward" /></div>
+        </div>
+        <div class="form-row">
+          <label for="nurseUser">Username:</label>
+          <div><input type="text" id="nurseUser" placeholder="Enter username" /></div>
+        </div>
+        <div class="form-row">
+          <label for="nursePass">Password:</label>
+          <div><input type="password" id="nursePass" placeholder="Enter password" /></div>
+        </div>
+        <div class="form-row">
+          <label></label>
+          <div>
+            <button type="submit" class="btn-primary">Register</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div style="margin-top: 10px; font-size: 13px;">Already registered? <a href="login.html">Login here</a></div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="nurse.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1 class="main-title">Hospital Management System</h1>
+    <p class="sub-title">Choose a user type to open its pages</p>
+
+    <nav class="top-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="admin/register.html">Admin</a>
+      <a href="doctor/register.html">Doctor</a>
+      <a href="nurse/register.html">Nurse</a>
+      <a href="patient/register.html">Patient</a>
+    </nav>
+
+    <div class="cards-grid">
+      <div class="role-card admin-card">
+        <div>
+          <h2>Admin</h2>
+          <p>Login, registration, add staff, departments and reports.</p>
+        </div>
+        <a href="admin/register.html" class="role-btn">Admin Panel</a>
+      </div>
+
+      <div class="role-card doctor-card">
+        <div>
+          <h2>Doctor</h2>
+          <p>Login, registration, prescriptions, schedule and leave.</p>
+        </div>
+        <a href="doctor/register.html" class="role-btn">Doctor Panel</a>
+      </div>
+
+      <div class="role-card nurse-card">
+        <div>
+          <h2>Nurse</h2>
+          <p>Login, registration, patient vitals, medication log and shift swap.</p>
+        </div>
+        <a href="nurse/register.html" class="role-btn">Nurse Panel</a>
+      </div>
+
+      <div class="role-card patient-card">
+        <div>
+          <h2>Patient</h2>
+          <p>Login, registration, appointments, bill payment and feedback.</p>
+        </div>
+        <a href="patient/register.html" class="role-btn">Patient Panel</a>
+      </div>
+    </div>
+
+    <footer class="page-footer">Created By Rifat Rudro</footer>
+  </div>
+  <script src="storage.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Registration</title>
+  <link rel="stylesheet" href="doctor.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Doctor Registration</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Registration</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <form id="doctorRegForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Doctor Information</div>
+        <div class="form-row">
+          <label for="docName">Full Name:</label>
+          <div>
+            <input type="text" id="docName" placeholder="e.g. Dr. Karim Ahmed" />
+            <div class="error-msg" id="errDocName"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="docId">Doctor ID:</label>
+          <div>
+            <input type="text" id="docId" placeholder="e.g. DOC-1001" />
+            <div class="error-msg" id="errDocId"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="docDept">Department:</label>
+          <div>
+            <input type="text" id="docDept" placeholder="e.g. Cardiology" />
+            <div class="error-msg" id="errDocDept"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="docUser">Username:</label>
+          <div>
+            <input type="text" id="docUser" placeholder="Enter username" />
+            <div class="error-msg" id="errDocUser"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="docPass">Password:</label>
+          <div>
+            <input type="password" id="docPass" placeholder="Enter password" />
+            <div class="error-msg" id="errDocPass"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label></label>
+          <div>
+            <button type="submit" class="btn-primary">Register</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div style="margin-top: 10px; font-size: 13px;">Already registered? <a href="login.html">Login here</a></div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="doctor.js"></script>
+</body>
+</html>

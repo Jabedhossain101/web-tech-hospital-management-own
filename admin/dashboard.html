@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand">
+      <div class="logo-badge">AIUB Logo</div>
+    </div>
+    <h1 class="page-heading">Admin Dashboard</h1>
+
+    <nav class="nav-bar" id="adminDashNav">
+      <a href="../index.html">Home</a>
+      <button type="button" class="active" data-tab="overviewTab">Overview</button>
+      <button type="button" data-tab="staffTab">Add Staff</button>
+      <button type="button" data-tab="deptTab">Departments</button>
+      <button type="button" data-tab="reportTab">Reports</button>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <div id="overviewTab" class="tab-section active">
+      <div class="stats-row">
+        <div class="stat-card">
+          <h3>Total Staff</h3>
+          <p id="statStaffCount">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Departments</h3>
+          <p id="statDeptCount">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Reports</h3>
+          <p id="statReportCount">0</p>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">Active Admin Session</div>
+        <p id="activeAdminInfo" style="font-size: 13px; line-height: 1.6;"></p>
+      </div>
+    </div>
+
+    <div id="staffTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Add New Staff</div>
+        <div class="form-row">
+          <label for="staffName">Staff Name:</label>
+          <div class="input-group"><input type="text" id="staffName" placeholder="Enter staff name" /></div>
+        </div>
+        <div class="form-row">
+          <label for="staffRole">Role:</label>
+          <div class="input-group">
+            <select id="staffRole">
+              <option value="Doctor">Doctor</option>
+              <option value="Nurse">Nurse</option>
+              <option value="Receptionist">Receptionist</option>
+              <option value="Lab Technician">Lab Technician</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="staffDept">Department:</label>
+          <div class="input-group"><input type="text" id="staffDept" placeholder="e.g. Cardiology" /></div>
+        </div>
+        <div class="form-row">
+          <label for="staffPhone">Phone:</label>
+          <div class="input-group"><input type="text" id="staffPhone" placeholder="e.g. 01712345678" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addStaffBtn">Add Staff</button>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">Manage Staff</div>
+        <div class="toolbar">
+          <input type="text" id="staffSearchInput" placeholder="Search staff by name or role..." style="padding: 6px 8px; border: 1px solid #999999; width: 260px;" />
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Department</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="staffTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="deptTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Add Department</div>
+        <div class="form-row">
+          <label for="deptName">Department Name:</label>
+          <div class="input-group"><input type="text" id="deptName" placeholder="e.g. Neurology" /></div>
+        </div>
+        <div class="form-row">
+          <label for="deptHead">Department Head:</label>
+          <div class="input-group"><input type="text" id="deptHead" placeholder="e.g. Dr. Hasan" /></div>
+        </div>
+        <div class="form-row">
+          <label for="deptBeds">Total Beds:</label>
+          <div class="input-group"><input type="number" id="deptBeds" placeholder="e.g. 30" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addDeptBtn">Add Department</button>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">Manage Departments</div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Department</th>
+              <th>Head</th>
+              <th>Beds</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="deptTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="reportTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Generate Report</div>
+        <div class="form-row">
+          <label for="reportTitle">Report Title:</label>
+          <div class="input-group"><input type="text" id="reportTitle" placeholder="e.g. Monthly Discharge Report" /></div>
+        </div>
+        <div class="form-row">
+          <label for="reportCategory">Category:</label>
+          <div class="input-group">
+            <select id="reportCategory">
+              <option value="Operations">Operations</option>
+              <option value="Staffing">Staffing</option>
+              <option value="Finance">Finance</option>
+              <option value="Inventory">Inventory</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn-primary" id="addReportBtn">Create Report</button>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box-title">System Reports</div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="reportTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+
+  <script src="../storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="patient.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Patient Dashboard</h1>
+
+    <nav class="nav-bar" id="patDashNav">
+      <a href="../index.html">Home</a>
+      <button type="button" class="active" data-tab="aptTab">Appointments</button>
+      <button type="button" data-tab="billTab">Bill Payment</button>
+      <button type="button" data-tab="fdbTab">Feedback</button>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <div id="aptTab" class="tab-section active">
+      <div class="form-box">
+        <div class="form-box-title">Book Appointment</div>
+        <div class="form-row">
+          <label for="aptDoc">Doctor:</label>
+          <div><input type="text" id="aptDoc" placeholder="e.g. Dr. Karim Ahmed" /></div>
+        </div>
+        <div class="form-row">
+          <label for="aptDept">Department:</label>
+          <div><input type="text" id="aptDept" placeholder="e.g. Cardiology" /></div>
+        </div>
+        <div class="form-row">
+          <label for="aptDate">Date:</label>
+          <div><input type="text" id="aptDate" placeholder="2026-11-28" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addAptBtn">Book Appointment</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Doctor</th><th>Department</th><th>Date</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="aptBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="billTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Bill Payment</div>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Item</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="billBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="fdbTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Submit Feedback</div>
+        <div class="form-row">
+          <label for="fdbRating">Rating:</label>
+          <div>
+            <select id="fdbRating">
+              <option value="5/5">5/5</option>
+              <option value="4/5">4/5</option>
+              <option value="3/5">3/5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="fdbComment">Comment:</label>
+          <div><input type="text" id="fdbComment" placeholder="Write feedback" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addFdbBtn">Submit Feedback</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Rating</th><th>Comment</th></tr></thead>
+          <tbody id="fdbBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="patient.js"></script>
+</body>
+</html>

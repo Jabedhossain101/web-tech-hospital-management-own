@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Login</title>
+  <link rel="stylesheet" href="patient.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Patient Login</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Registration</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <form id="patientLoginForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Sign In</div>
+        <div class="form-row">
+          <label for="patLoginId">Patient ID:</label>
+          <div><input type="text" id="patLoginId" placeholder="e.g. PAT-3001" /></div>
+        </div>
+        <div class="form-row">
+          <label for="patLoginPass">Password:</label>
+          <div><input type="password" id="patLoginPass" placeholder="Enter password" /></div>
+        </div>
+        <div class="form-row">
+          <label>Security Check:</label>
+          <div>
+            <div style="margin-bottom: 6px; font-size: 13px;">What is 6 + 3 ?</div>
+            <input type="text" id="patCaptchaAns" placeholder="Your answer" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label></label>
+          <div>
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div class="error-msg" id="patLoginErr"></div>
+            <div style="margin-top: 8px; font-size: 12px; color: #555;">Default ID: PAT-3001 | Password: Patient123</div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="patient.js"></script>
+</body>
+</html>

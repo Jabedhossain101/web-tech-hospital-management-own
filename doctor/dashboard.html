@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="doctor.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Doctor Dashboard</h1>
+
+    <nav class="nav-bar" id="docDashNav">
+      <a href="../index.html">Home</a>
+      <button type="button" class="active" data-tab="rxTab">Prescriptions</button>
+      <button type="button" data-tab="schedTab">Schedule</button>
+      <button type="button" data-tab="leaveTab">Leave</button>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <div id="rxTab" class="tab-section active">
+      <div class="form-box">
+        <div class="form-box-title">Add Prescription</div>
+        <div class="form-row">
+          <label for="rxPatient">Patient Name:</label>
+          <div><input type="text" id="rxPatient" placeholder="Patient name" /></div>
+        </div>
+        <div class="form-row">
+          <label for="rxDiag">Diagnosis:</label>
+          <div><input type="text" id="rxDiag" placeholder="Diagnosis" /></div>
+        </div>
+        <div class="form-row">
+          <label for="rxMed">Medicine:</label>
+          <div><input type="text" id="rxMed" placeholder="Medicine details" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addRxBtn">Save Prescription</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Patient</th><th>Diagnosis</th><th>Medicine</th><th>Action</th></tr></thead>
+          <tbody id="rxBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="schedTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Manage Schedule</div>
+        <div class="form-row">
+          <label for="schDate">Date:</label>
+          <div><input type="text" id="schDate" placeholder="2026-11-25" /></div>
+        </div>
+        <div class="form-row">
+          <label for="schTime">Time:</label>
+          <div><input type="text" id="schTime" placeholder="11:00 AM" /></div>
+        </div>
+        <div class="form-row">
+          <label for="schPatient">Patient:</label>
+          <div><input type="text" id="schPatient" placeholder="Patient name" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addSchBtn">Add Slot</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Date</th><th>Time</th><th>Patient</th><th>Action</th></tr></thead>
+          <tbody id="schBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="leaveTab" class="tab-section">
+      <div class="form-box">
+        <div class="form-box-title">Apply for Leave</div>
+        <div class="form-row">
+          <label for="levFrom">From:</label>
+          <div><input type="text" id="levFrom" placeholder="2026-11-28" /></div>
+        </div>
+        <div class="form-row">
+          <label for="levTo">To:</label>
+          <div><input type="text" id="levTo" placeholder="2026-11-29" /></div>
+        </div>
+        <div class="form-row">
+          <label for="levReason">Reason:</label>
+          <div><input type="text" id="levReason" placeholder="Reason" /></div>
+        </div>
+        <button type="button" class="btn-primary" id="addLevBtn">Submit Leave</button>
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>From</th><th>To</th><th>Reason</th><th>Status</th></tr></thead>
+          <tbody id="levBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="doctor.js"></script>
+</body>
+</html>

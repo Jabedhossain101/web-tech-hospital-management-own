@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand">
+      <div class="logo-badge">AIUB Logo</div>
+    </div>
+    <h1 class="page-heading">Admin Login</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Registration</a>
+      <a href="dashboard.html">Add Staff</a>
+      <a href="dashboard.html">Departments</a>
+      <a href="dashboard.html">Reports</a>
+    </nav>
+
+    <form id="adminLoginForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Sign In</div>
+
+        <div class="form-row">
+          <label for="loginAdminId">Admin ID:</label>
+          <div class="input-group">
+            <input type="text" id="loginAdminId" placeholder="e.g. ADM-1234" />
+            <div class="error-msg" id="errLoginId"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="loginPassword">Password:</label>
+          <div class="input-group">
+            <input type="password" id="loginPassword" placeholder="Enter password" />
+            <label style="font-weight: normal; margin-left: 8px;">
+              <input type="checkbox" id="togglePassword" /> Show password
+            </label>
+            <div class="error-msg" id="errLoginPassword"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Security Check:</label>
+          <div class="input-group">
+            <div id="captchaQuestion" style="margin-bottom: 6px; font-size: 13px;">What is 9 + 3 ?</div>
+            <input type="text" id="captchaAnswer" placeholder="Your answer" />
+            <button type="button" class="btn-secondary" id="newCaptchaBtn">New question</button>
+            <div class="error-msg" id="errCaptcha"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label></label>
+          <div class="input-group">
+            <label style="font-weight: normal;">
+              <input type="checkbox" id="rememberMe" /> Remember me on this computer
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label></label>
+          <div class="input-group">
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div class="helper-link">New admin? <a href="register.html">Register here</a></div>
+            <div class="hint-text">Default ID: ADM-1234 | Password: Admin123</div>
+          </div>
+        </div>
+      </div>
+      <div id="loginBanner" class="status-banner"></div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+
+  <script src="../storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

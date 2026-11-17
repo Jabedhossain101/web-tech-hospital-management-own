@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurse Login</title>
+  <link rel="stylesheet" href="nurse.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-brand"><div class="logo-badge">AIUB Logo</div></div>
+    <h1 class="page-heading">Nurse Login</h1>
+
+    <nav class="nav-bar">
+      <a href="../index.html">Home</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Registration</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <form id="nurseLoginForm" novalidate>
+      <div class="form-box">
+        <div class="form-box-title">Sign In</div>
+        <div class="form-row">
+          <label for="nurseLoginId">Nurse ID:</label>
+          <div><input type="text" id="nurseLoginId" placeholder="e.g. NRS-2001" /></div>
+        </div>
+        <div class="form-row">
+          <label for="nurseLoginPass">Password:</label>
+          <div><input type="password" id="nurseLoginPass" placeholder="Enter password" /></div>
+        </div>
+        <div class="form-row">
+          <label>Security Check:</label>
+          <div>
+            <div style="margin-bottom: 6px; font-size: 13px;">What is 7 + 2 ?</div>
+            <input type="text" id="nurseCaptchaAns" placeholder="Your answer" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label></label>
+          <div>
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+            <div class="error-msg" id="nurseLoginErr"></div>
+            <div style="margin-top: 8px; font-size: 12px; color: #555;">Default ID: NRS-2001 | Password: Nurse123</div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer-note">Created By Rifat Rudro</footer>
+  </div>
+  <script src="../storage.js"></script>
+  <script src="nurse.js"></script>
+</body>
+</html>
